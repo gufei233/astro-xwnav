@@ -31,6 +31,10 @@ export const categories = [
     name: '开源平台', icon: '/icons/category/opensource.svg',
   },
   {
+    id: 'source',
+    name: '资源',
+  },    
+  {
     id: 'Studying',
     name: '个人其他站点', icon: '/icons/category/studying.svg',
   },
@@ -72,6 +76,23 @@ export const sites = [
       url: 'https://github.com/',
       category: 'opensource',
       icon: '/icons/github.webp',
+      },
+  //资源
+      {
+      id: 'duanjugou',
+      title: '短剧狗',
+      description: '专注短剧资源的网盘引擎，聚合并去重 2.4 万+ 夸克链接，支持标签筛选与实时更新榜单，界面极简且无广告，适合“搜-即-看”的碎片化追剧场景。',
+      shortDesc: '短剧网盘搜索。',
+      url: 'https://duanjugou.top/',
+      category: 'source',
+      },
+      {
+      id: '1lou',
+      title: 'BT之家·1LOU站',
+      description: '影视 BT 资源社区，由经典 BTBTT 迁移重建，秉持“回归初心·追求极简”，免注册浏览海量电影、剧集、动漫及纪录片种子，并提供 4K—1080P 画质分级与活跃讨论区。',
+      shortDesc: '影视 BT 社区。',
+      url: 'https://www.1lou.me/',
+      category: 'source',
       },
   //个人其他站点      
       {
