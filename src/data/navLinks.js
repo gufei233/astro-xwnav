@@ -85,7 +85,6 @@ export const sites = [
       shortDesc: '短剧网盘搜索。',
       url: 'https://duanjugou.top/',
       category: 'source',
-      icon: '/icons/category/source.svg',
       },
       {
       id: '1lou',
@@ -94,7 +93,6 @@ export const sites = [
       shortDesc: '影视 BT 社区。',
       url: 'https://www.1lou.me/',
       category: 'source',
-      icon: '/icons/category/source.svg',
       },
   //个人其他站点      
       {
