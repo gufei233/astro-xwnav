@@ -52,22 +52,12 @@ export const sites = [
       },
   //个人其他站点      
       {
-      id: 'zywede',
-      title: 'zywe.de',
-      description: '个人主页与知识集散地。作为技术爱好者，展示自己的全部项目、实践与分享的中心',
-      shortDesc: 'zywe个人官网',
-      url: 'https://zywe.de/',
+      id: 'gufei_blog',
+      title: '顾の博客',
+      description: '顾绯维护的原创博客，分享前端开发技巧、脚本实践、学习方法与生活随笔，并以时间线与热力图形式记录成长轨迹，内容真诚且富技术洞见。',
+      shortDesc: '技术与生活随笔',
+      url: 'https://blog.gufei.life/',
       category: 'Studying',
-      icon: '/icons/zywede.png',
-      },
-      {
-      id: 'dh_zywede',
-      title: 'nav.zywe.de',
-      description: '专属导航页,这里汇聚了日常学习、开发与管理服务器所需的所有高效工具与资源链接，快速触达各项在线服务的便捷入口，确保学习与实践的流畅性。',
-      shortDesc: '让每个人都有自己的网站式收藏夹',
-      url: 'https://dh.zywe.de/',
-      category: 'Studying',
-      icon: '/icons/dh-zywede.png',
       },
       // pages      
       {
