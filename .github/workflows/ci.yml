@@ -1,101 +1,63 @@
-name: Build & Deploy Astro-xwnav
+# .github/workflows/ci.yml
+name: Build Astro‑xwnav
 
-# ───────────────────────── 触发条件 ─────────────────────────
 on:
-  push:                 # 合并 PR / 直接推 main 均触发
-    branches: [main]
+  push:
+    branches: [main]          # push / merge main 时触发
   pull_request:
-    branches: [main]    # PR 也先跑一遍（但不部署）
-  workflow_dispatch:    # 手动按钮调试
+    branches: [main]          # PR 也跑一遍（不提交变动）
+  workflow_dispatch:          # 手动按钮
 
-# ─────────── 全局权限：允许工作流写回代码、发布 Pages ─────────
 permissions:
-  contents: write       # 必需：add-and-commit 推代码
-  pages: write
-  id-token: write       # deploy-pages OIDC
+  contents: write             # 允许工作流提交图标补丁
 
 jobs:
-#================================================================
-# 1) build 任务：补图标 → (必要时) commit → 构建 + 上传 Artifact
-#================================================================
   build:
     runs-on: ubuntu-latest
 
-    # 避免脚本自己的 [skip icons] 提交再次触发循环
+    # 跳过由脚本自身提交的 commit（信息里含 [skip icons]）
     if: "!contains(github.event.head_commit.message, '[skip icons]')"
 
-    outputs:
-      artifact-name: dist-${{ github.sha }}
-
     steps:
-    # 1-1 Checkout
+    # ① 检出代码
     - uses: actions/checkout@v4
 
-    # 1-2 Node & pnpm
+    # ② 安装 Node + pnpm（带缓存）
     - uses: actions/setup-node@v4
       with:
         node-version: 20
     - uses: pnpm/action-setup@v2
       with:
         version: 9
-        cache: true                # 自动缓存 ~/.pnpm-store
+        cache: true            # 缓存 ~/.pnpm-store
 
-    # 1-3 安装依赖
+    # ③ 安装依赖
     - run: pnpm install --frozen-lockfile
 
-    # 1-4 🚚 下载 & 回写“网站 + 分类”图标
+    # ④ 运行图标脚本（网站 + 分类），并检测是否修改文件
     - name: Run icon generator
-      id: icon
-      run: pnpm dlx tsx icon-system/0icon.ts
+      id: icons
+      run: |
+        pnpm dlx tsx icon-system/0icon.ts
+        if ! git diff --quiet; then echo "changed=true" >> $GITHUB_OUTPUT; fi
 
-    # 1-5 📝 若脚本改动了文件 → commit & push
-    - name: Commit updated navLinks.js / icons
+    # ⑤ 若有变更 → commit 写回 main
+    - name: Commit updated icons
+      if: steps.icons.outputs.changed == 'true'
       uses: EndBug/add-and-commit@v9
-      if: steps.icon.outputs.changes_detected == 'true'
       with:
+        add: .
         message: 'chore: auto add icons [skip icons]'
-        add: '.'
         default_author: github_actions
         push: true
 
-    # 1-6 🛠️ 构建 Astro
-    - name: Build site
+    # ⑥ 构建 Astro
+    - name: Build Astro site
       run: pnpm build
 
-    # 1-7 📤 上传 dist 产物 (供后续 deploy & 手动下载)
+    # ⑦ 上传 dist/ 目录（单层 zip）
     - uses: actions/upload-artifact@v4
-      with:
-        name: ${{ steps.build.outputs.artifact-name || format('dist-{0}', github.sha) }}
-        path: dist
-        retention-days: 14
-
-#================================================================
-# 2) deploy 任务：仅在 main 分支 & build 成功后发布 GitHub Pages
-#================================================================
-  deploy:
-    needs: build
-    if: github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
-    steps:
-    # 2-1 下载上一步 Artifact
-    - uses: actions/download-artifact@v4
       with:
         name: dist-${{ github.sha }}
         path: dist
-
-    # 2-2 配置 Pages
-    - uses: actions/configure-pages@v4
-
-    # 2-3 上传静态文件
-    - uses: actions/upload-pages-artifact@v3
-      with:
-        path: dist
-
-    # 2-4 部署
-    - name: Deploy to GitHub Pages
-      id: deployment
-      uses: actions/deploy-pages@v4
+        retention-days: 14
