@@ -24,7 +24,7 @@ npx tsx icon-system/0icon.ts
 export const categories = [
   {
     id: 'test',
-    name: '测速工具',
+    name: '测速工具', icon: '/icons/category/test.svg',
   },
   {
     id: 'opensource',
@@ -44,7 +44,7 @@ export const categories = [
  * @type {Array<{id: string, title: string, description: string, shortDesc: string, url: string, icon: string, category: string}>}
  */
 export const sites = [
-  //测速工具
+  //测速工具      
       {
       id: 'speedtest',
       title: 'Speedtest® by Ookla',
@@ -52,15 +52,17 @@ export const sites = [
       shortDesc: '网络测速工具。',
       url: 'https://www.speedtest.net/',
       category: 'test',
+      icon: '/icons/speedtest.webp',
       },
       {
-     id: 'ustc_test',
-     title: 'USTC 测速站',
-     description: '中国科学技术大学网络空间安全学院部署的双栈（IPv4/IPv6）测速平台，开源透明，可快速获取本地网络延迟、抖动与上下行带宽，并提供多所高校节点互测入口，方便学术网络环境评估。',
-     shortDesc: '中科大本地测速。',
-     url: 'https://test.ustc.edu.cn/',
-     category: 'test',
-     },
+      id: 'ustc_test',
+      title: 'USTC 测速站',
+      description: '中国科学技术大学网络空间安全学院部署的双栈（IPv4/IPv6）测速平台，开源透明，可快速获取本地网络延迟、抖动与上下行带宽，并提供多所高校节点互测入口，方便学术网络环境评估。',
+      shortDesc: '中科大本地测速。',
+      url: 'https://test.ustc.edu.cn/',
+      category: 'test',
+      icon: '/icons/ustc-test.webp',
+      },
   //开源      
       {
       id: 'github',
