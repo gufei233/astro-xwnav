@@ -24,7 +24,7 @@ npx tsx icon-system/0icon.ts
 export const categories = [
   {
     id: 'test',
-    name: '测速工具', 
+    name: '测速工具', icon: '/icons/category/test.svg', 
   },
   {
     id: 'opensource',
@@ -52,6 +52,7 @@ export const sites = [
       shortDesc: '网络测速工具。',
       url: 'https://www.speedtest.net/',
       category: 'test',
+      icon: '/icons/speedtest.webp',
       },
       {
       id: 'ustc_test',
@@ -60,6 +61,7 @@ export const sites = [
       shortDesc: '中科大本地测速。',
       url: 'https://test.ustc.edu.cn/',
       category: 'test',
+      icon: '/icons/ustc-test.webp',
       },
   //开源      
       {
@@ -79,6 +81,7 @@ export const sites = [
       shortDesc: '技术与生活随笔',
       url: 'https://blog.gufei.life/',
       category: 'Studying',
+      icon: '/icons/gufei-blog.webp',
       },
       // pages      
       {
