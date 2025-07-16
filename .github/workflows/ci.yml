@@ -1,61 +1,64 @@
 # .github/workflows/ci.yml
-name: Build Astro‑xwnav
+name: Build Astro-xwnav
 
 on:
   push:
-    branches: [main]          # push / merge main 时触发
+    branches: [main]
   pull_request:
-    branches: [main]          # PR 也跑一遍（不提交变动）
-  workflow_dispatch:          # 手动按钮
+    branches: [main]
+  workflow_dispatch:
 
 permissions:
-  contents: write             # 允许工作流提交图标补丁
+  contents: write        # 允许自动提交
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
-    # 跳过由脚本自身提交的 commit（信息里含 [skip icons]）
+    # 跳过脚本自己的 [skip icons] 提交
     if: "!contains(github.event.head_commit.message, '[skip icons]')"
 
     steps:
-    # ① 检出代码
+    # ① Checkout
     - uses: actions/checkout@v4
 
-    # ② 安装 Node + pnpm（带缓存）
+    # ② Node & pnpm
     - uses: actions/setup-node@v4
       with:
         node-version: 20
     - uses: pnpm/action-setup@v2
       with:
         version: 9
-        cache: true            # 缓存 ~/.pnpm-store
+        cache: true
 
-    # ③ 安装依赖
+    # ③ Install deps
     - run: pnpm install --frozen-lockfile
 
-    # ④ 运行图标脚本（网站 + 分类），并检测是否修改文件
+    # ④ 🚚 运行图标脚本
     - name: Run icon generator
-      id: icons
+      id: icon
       run: |
         pnpm dlx tsx icon-system/0icon.ts
-        if ! git diff --quiet; then echo "changed=true" >> $GITHUB_OUTPUT; fi
+        # 若任意文件被修改，则输出 changed=true
+        if ! git diff --quiet; then
+          echo "changed=true" >> $GITHUB_OUTPUT
+        fi
 
-    # ⑤ 若有变更 → commit 写回 main
-    - name: Commit updated icons
-      if: steps.icons.outputs.changed == 'true'
+    # ⑤ 📝 如有变动 → commit (图标文件 + navLinks.js)
+    - name: Commit icon changes
+      if: steps.icon.outputs.changed == 'true'
       uses: EndBug/add-and-commit@v9
       with:
         add: .
         message: 'chore: auto add icons [skip icons]'
         default_author: github_actions
-        push: true
+        push: true                     # 推回 main
 
-    # ⑥ 构建 Astro
+    # ⑥ 🛠 Build
     - name: Build Astro site
       run: pnpm build
 
-    # ⑦ 上传 dist/ 目录（单层 zip）
+    # ⑦ 📦 Upload single-zip artifact
     - uses: actions/upload-artifact@v4
       with:
         name: dist-${{ github.sha }}
