@@ -58,6 +58,7 @@ export const sites = [
       shortDesc: '技术与生活随笔',
       url: 'https://blog.gufei.life/',
       category: 'Studying',
+      icon: '/icons/gufei-blog.webp',
       },
       // pages      
       {
@@ -149,4 +150,3 @@ function escapeHtml(str) {
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#039;');
 }
-
