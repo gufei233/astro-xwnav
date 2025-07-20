@@ -24,7 +24,7 @@ npx tsx icon-system/0icon.ts
 export const categories = [
   {
     id: 'tool',
-    name: '工具',
+    name: '工具', icon: '/icons/category/tool.svg',
   },
   {
     id: 'opensource',
@@ -66,7 +66,7 @@ export const sites = [
       url: 'https://test.ustc.edu.cn/',
       category: 'tool',
       icon: '/icons/ustc-test.webp',
-      },
+      },      
       {
       id: 'freeconvert',
       title: 'FreeConvert',
@@ -74,6 +74,7 @@ export const sites = [
       shortDesc: '全格式云转换。',
       url: 'https://www.freeconvert.com/',
       category: 'tool',
+      icon: '/icons/freeconvert.webp',
       },
       {
       id: 'convertio',
@@ -82,6 +83,7 @@ export const sites = [
       shortDesc: '轻量文件转换。',
       url: 'https://convertio.co/',
       category: 'tool',
+      icon: '/icons/convertio.webp',
       },
       {
       id: 'remove_bg',
@@ -90,6 +92,7 @@ export const sites = [
       shortDesc: 'AI 抠图神器。',
       url: 'https://www.remove.bg/',
       category: 'tool',
+      icon: '/icons/remove-bg.webp',
       },
       {
       id: 'xiaohongshu_day',
@@ -98,6 +101,7 @@ export const sites = [
       shortDesc: '小红书去水印。',
       url: 'https://xiaohongshu.day/',
       category: 'tool',
+      icon: '/icons/xiaohongshu-day.webp',
       },
       {
       id: 'chaipip',
@@ -106,6 +110,7 @@ export const sites = [
       shortDesc: '高精度 IP 查询。',
       url: 'https://www.chaipip.com/',
       category: 'tool',
+      icon: '/icons/chaipip.webp',
       },
       {
       id: 'shukui',
@@ -114,6 +119,7 @@ export const sites = [
       shortDesc: '海量图书检索。',
       url: 'https://www.shukui.net/',
       category: 'tool',
+      icon: '/icons/shukui.webp',
       },
       {
       id: 'qq_browser_tools',
@@ -122,8 +128,8 @@ export const sites = [
       shortDesc: 'QQ 浏览器工具集。',
       url: 'https://tool.browser.qq.com/',
       category: 'tool',
+      icon: '/icons/qq-browser-tools.webp',
       },
-
   //开源      
       {
       id: 'github',
