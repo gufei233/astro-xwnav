@@ -164,7 +164,7 @@ export const sites = [
       description: '开放式图书检索与下载平台，整合主库/从库双索引，支持 ISBN、作者与出版社精准匹配，涵盖图书、期刊与古籍等多种载体。',
       shortDesc: '海量图书检索。',
       url: 'https://www.shukui.net/',
-      category: 'tool',
+      category: 'source',
       icon: '/icons/shukui.webp',
       },
   //论坛      
