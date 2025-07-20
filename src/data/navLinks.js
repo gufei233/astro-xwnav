@@ -36,11 +36,11 @@ export const categories = [
   },
   {
     id: 'forum',
-    name: '论坛', 
+    name: '论坛', icon: '/icons/category/forum.svg', 
   },  
   {
     id: 'weather',
-    name: '天气', 
+    name: '天气', icon: '/icons/category/weather.svg', 
   },
   {
     id: 'Studying',
@@ -167,7 +167,7 @@ export const sites = [
       category: 'tool',
       icon: '/icons/shukui.webp',
       },
-  //论坛
+  //论坛      
       {
       id: 'linux_do',
       title: 'LINUX DO',
@@ -175,6 +175,7 @@ export const sites = [
       shortDesc: '邀请制 Linux 论坛。',
       url: 'https://linux.do/',
       category: 'forum',
+      icon: '/icons/linux-do.webp',
       },
       {
       id: 'stackoverflow',
@@ -183,6 +184,7 @@ export const sites = [
       shortDesc: '开发者问答社区。',
       url: 'https://stackoverflow.com/',
       category: 'forum',
+      icon: '/icons/stackoverflow.webp',
       },
       {
       id: 'nodeseek',
@@ -191,6 +193,7 @@ export const sites = [
       shortDesc: '极客技术论坛。',
       url: 'https://www.nodeseek.com/',
       category: 'forum',
+      icon: '/icons/nodeseek.webp',
       },
       {
       id: 'v2ex',
@@ -199,6 +202,7 @@ export const sites = [
       shortDesc: '综合技术社区。',
       url: 'https://www.v2ex.com/',
       category: 'forum',
+      icon: '/icons/v2ex.webp',
       },
       {
       id: '52pojie',
@@ -207,8 +211,9 @@ export const sites = [
       shortDesc: '逆向安全论坛。',
       url: 'https://www.52pojie.cn/',
       category: 'forum',
+      icon: '/icons/52pojie.webp',
       },
-  //天气
+  //天气      
       {
       id: 'zoom_earth',
       title: 'Zoom Earth',
@@ -216,6 +221,7 @@ export const sites = [
       shortDesc: '实时卫星气象图。',
       url: 'https://zoom.earth/',
       category: 'weather',
+      icon: '/icons/zoom-earth.webp',
       },
       {
       id: 'windy',
@@ -224,6 +230,7 @@ export const sites = [
       shortDesc: '多模型风场地图。',
       url: 'http://windy.com/',
       category: 'weather',
+      icon: '/icons/windy.webp',
       },
       {
       id: 'zj_typhoon',
@@ -232,6 +239,7 @@ export const sites = [
       shortDesc: '权威台风监测。',
       url: 'https://typhoon.slt.zj.gov.cn/',
       category: 'weather',
+      icon: '/icons/zj-typhoon.webp',
       },
       {
       id: 'nmc',
@@ -240,6 +248,7 @@ export const sites = [
       shortDesc: '国家级气象服务。',
       url: 'https://www.nmc.cn/',
       category: 'weather',
+      icon: '/icons/nmc.webp',
       },
       {
       id: 'caiyun_h5',
@@ -248,6 +257,7 @@ export const sites = [
       shortDesc: '分钟级降水预报。',
       url: 'https://h5.caiyunapp.com/',
       category: 'weather',
+      icon: '/icons/caiyun-h5.webp',
       },
       {
       id: 'weather_channel',
@@ -256,6 +266,7 @@ export const sites = [
       shortDesc: 'TWC 全球天气门户。',
       url: 'https://weather.com/',
       category: 'weather',
+      icon: '/icons/weather-channel.webp',
       },
   //个人其他站点      
       {
