@@ -23,8 +23,8 @@ npx tsx icon-system/0icon.ts
  */
 export const categories = [
   {
-    id: 'test',
-    name: '测速工具', icon: '/icons/category/test.svg', 
+    id: 'tool',
+    name: '工具',
   },
   {
     id: 'opensource',
@@ -48,14 +48,14 @@ export const categories = [
  * @type {Array<{id: string, title: string, description: string, shortDesc: string, url: string, icon: string, category: string}>}
  */
 export const sites = [
-  //测速工具      
+  //工具      
       {
       id: 'speedtest',
       title: 'Speedtest® by Ookla',
       description: '全球最受信赖的网络性能测试服务，依托 16 000+ 分布式服务器一键测量下载/上传带宽与延迟，并汇聚 520 亿次测试数据，为运营商、媒体及科研机构提供权威宽带统计与诊断。',
       shortDesc: '网络测速工具。',
       url: 'https://www.speedtest.net/',
-      category: 'test',
+      category: 'tool',
       icon: '/icons/speedtest.webp',
       },
       {
@@ -64,9 +64,66 @@ export const sites = [
       description: '中国科学技术大学网络空间安全学院部署的双栈（IPv4/IPv6）测速平台，开源透明，可快速获取本地网络延迟、抖动与上下行带宽，并提供多所高校节点互测入口，方便学术网络环境评估。',
       shortDesc: '中科大本地测速。',
       url: 'https://test.ustc.edu.cn/',
-      category: 'test',
+      category: 'tool',
       icon: '/icons/ustc-test.webp',
       },
+      {
+      id: 'freeconvert',
+      title: 'FreeConvert',
+      description: '云端文件转换平台，支持 2 000+ 种音视频、图片、文档、电子书与压缩格式互转，采用 SSL/TLS 加密与隔离数据中心保障隐私，可处理数 GB 大文件，并提供批量与 API 自动化接口。',
+      shortDesc: '全格式云转换。',
+      url: 'https://www.freeconvert.com/',
+      category: 'tool',
+      },
+      {
+      id: 'convertio',
+      title: 'Convertio',
+      description: '覆盖 300+ 格式的在线转换服务，全部运算在浏览器端完成，上传即转、自动删源文件；支持拖拽、多文件并行及 Chrome 插件，界面简洁、上手零门槛。',
+      shortDesc: '轻量文件转换。',
+      url: 'https://convertio.co/',
+      category: 'tool',
+      },
+      {
+      id: 'remove_bg',
+      title: 'remove.bg',
+      description: '基于深度学习的图片背景移除工具，5 秒内自动抠图并输出透明 PNG，可一键替换背景或批量处理；提供桌面端、PS 插件与 API 方便电商、设计等场景集成。',
+      shortDesc: 'AI 抠图神器。',
+      url: 'https://www.remove.bg/',
+      category: 'tool',
+      },
+      {
+      id: 'xiaohongshu_day',
+      title: 'Xiaohongshu.day',
+      description: '小红书内容解析与无水印下载站，粘贴链接即可批量保存笔记图片、视频与 LivePhoto，永久有效、无需登录，适合运营与素材备份。',
+      shortDesc: '小红书去水印。',
+      url: 'https://xiaohongshu.day/',
+      category: 'tool',
+      },
+      {
+      id: 'chaipip',
+      title: 'ChaiPiIP',
+      description: '基于百度高精度 IP 库的定位查询服务，可精确到街道 / 商圈级别，实时刷新并展示多源 IP 数据，适合风控、运维和广告定向。',
+      shortDesc: '高精度 IP 查询。',
+      url: 'https://www.chaipip.com/',
+      category: 'tool',
+      },
+      {
+      id: 'shukui',
+      title: '书葵网',
+      description: '开放式图书检索与下载平台，整合主库/从库双索引，支持 ISBN、作者与出版社精准匹配，涵盖图书、期刊与古籍等多种载体。',
+      shortDesc: '海量图书检索。',
+      url: 'https://www.shukui.net/',
+      category: 'tool',
+      },
+      {
+      id: 'qq_browser_tools',
+      title: '帮小忙工具箱',
+      description: '腾讯 QQ 浏览器推出的在线工具集合，囊括证件照生成、PDF 转换、文字 OCR、照片修复与二维码生成等百余实用小工具，一站式解决办公与生活琐事。',
+      shortDesc: 'QQ 浏览器工具集。',
+      url: 'https://tool.browser.qq.com/',
+      category: 'tool',
+      },
+
   //开源      
       {
       id: 'github',
