@@ -166,7 +166,7 @@ export const sites = [
       url: 'https://www.shukui.net/',
       category: 'source',
       icon: '/icons/shukui.webp',
-      },
+      },      
       {
       id: 'zlibrary_cn',
       title: 'Z-Library 中文镜像',
@@ -174,8 +174,8 @@ export const sites = [
       shortDesc: 'Z-Library 中文入口。',
       url: 'https://zh.go-to-library.sk/',
       category: 'source',
+      icon: '/icons/zlibrary-cn.webp',
       },
-
   //论坛      
       {
       id: 'linux_do',
