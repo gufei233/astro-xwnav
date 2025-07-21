@@ -287,6 +287,14 @@ export const sites = [
       category: 'Studying',
       icon: '/icons/gufei-blog.webp',
       },
+      {
+      id: 'gufei_animals',
+      title: '猛兽派对动物分类',
+      description: '根据猛兽派对游戏中动物特征进行分类的工具，用于快捷筛选游戏中任务所需的动物',
+      shortDesc: '猛兽派对动物特征分类系统',
+      url: 'https://animals.gufei.life/',
+      category: 'Studying',
+      },
       // pages      
       {
       id: 'github-pages',
