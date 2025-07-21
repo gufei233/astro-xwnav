@@ -167,6 +167,15 @@ export const sites = [
       category: 'source',
       icon: '/icons/shukui.webp',
       },
+      {
+      id: 'zlibrary_cn',
+      title: 'Z-Library 中文镜像',
+      description: 'Z-Library 官方推出的中文访问页，整合桌面版、Android App、Telegram 机器人、浏览器扩展与 Tor 域等多种入口，并提供“神奇邮箱”账号找回与动态镜像更新，确保在多变网络环境下持续稳定连接全球最大免费数字图书馆。',
+      shortDesc: 'Z-Library 中文入口。',
+      url: 'https://zh.go-to-library.sk/',
+      category: 'source',
+      },
+
   //论坛      
       {
       id: 'linux_do',
