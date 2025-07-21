@@ -8,34 +8,41 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write          # 允许自动提交
+  contents: write 
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, '[skip icons]')"  # 跳过自己
+
+    # 跳过脚本自己的 [skip icons] 提交
+    if: "!contains(github.event.head_commit.message, '[skip icons]')"
 
     steps:
     # ① Checkout
     - uses: actions/checkout@v4
+      with:
+        clean: false  
 
     # ② Node & pnpm
     - uses: actions/setup-node@v4
       with: { node-version: 20 }
+    
+    # ③ 安装 pnpm
     - uses: pnpm/action-setup@v2
-      with: { version: 9, cache: true }
+      with:
+        version: 9
 
-    # ③ 安装依赖
+    # ④ 安装依赖
     - run: pnpm install --frozen-lockfile
 
-    # ④ 运行图标脚本
+    # ⑤ 运行图标脚本
     - name: Run icon generator
       id: icons
       run: |
         pnpm dlx tsx icon-system/0icon.ts
         if ! git diff --quiet; then echo "changed=true" >> $GITHUB_OUTPUT; fi
 
-    # ⑤ 有变更 → 强制添加 public/icons + navLinks.js → 提交
+    # ⑥ 提交图标与数据文件变动
     - name: Commit icon & data changes
       if: steps.icons.outputs.changed == 'true'
       run: |
@@ -46,17 +53,16 @@ jobs:
         git add -f public/icons/**
         git add src/data/navLinks.js
 
-        # 若仍有其他变更也一起提交
         git commit -m "chore: auto add icons [skip icons]" || echo "Nothing to commit"
         git push
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   # checkout 已带，不需额外 PAT
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-    # ⑥ 构建
+    # ⑦ 构建
     - name: Build Astro site
       run: pnpm build
 
-    # ⑦ 上传单层 ZIP Artifact
+    # ⑧ 上传 ZIP Artifact
     - uses: actions/upload-artifact@v4
       with:
         name: dist-${{ github.sha }}
