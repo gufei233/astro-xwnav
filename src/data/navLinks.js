@@ -286,7 +286,7 @@ export const sites = [
       url: 'https://blog.gufei.life/',
       category: 'Studying',
       icon: '/icons/gufei-blog.webp',
-      },
+      },      
       {
       id: 'gufei_animals',
       title: '猛兽派对动物分类',
@@ -294,6 +294,7 @@ export const sites = [
       shortDesc: '猛兽派对动物特征分类系统',
       url: 'https://animals.gufei.life/',
       category: 'Studying',
+      icon: '/icons/gufei-animals.webp',
       },
       // pages      
       {
