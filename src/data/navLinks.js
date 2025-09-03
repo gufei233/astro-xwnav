@@ -24,31 +24,31 @@ npx tsx icon-system/0icon.ts
 export const categories = [
   {
     id: 'tool',
-    name: '工具',
+    name: '工具', icon: '/icons/category/tool.svg',
   },
   {
     id: 'opensource',
-    name: '开源平台',
+    name: '开源平台', icon: '/icons/category/opensource.svg',
   },
   {
     id: 'source',
-    name: '资源',
+    name: '资源', icon: '/icons/category/source.svg',
   },
   {
     id: 'forum',
-    name: '论坛',
+    name: '论坛', icon: '/icons/category/forum.svg',
   },  
   {
     id: 'weather',
-    name: '天气',
+    name: '天气', icon: '/icons/category/weather.svg',
   },
   {
     id: 'Studying',
-    name: '个人其他站点',
+    name: '个人其他站点', icon: '/icons/category/studying.svg',
   },
   {
     id: 'pages',
-    name: '静态部署平台',
+    name: '静态部署平台', icon: '/icons/category/pages.svg',
   },
 ];
 /**
@@ -64,6 +64,7 @@ export const sites = [
       shortDesc: '网络测速工具。',
       url: 'https://www.speedtest.net/',
       category: 'tool',
+      icon: '/icons/speedtest.webp',
       },
       {
       id: 'ustc_test',
@@ -72,7 +73,8 @@ export const sites = [
       shortDesc: '中科大本地测速。',
       url: 'https://test.ustc.edu.cn/',
       category: 'tool',
-      },      
+      icon: '/icons/ustc-test.webp',
+      },
       {
       id: 'freeconvert',
       title: 'FreeConvert',
@@ -80,6 +82,7 @@ export const sites = [
       shortDesc: '全格式云转换。',
       url: 'https://www.freeconvert.com/',
       category: 'tool',
+      icon: '/icons/freeconvert.webp',
       },
       {
       id: 'convertio',
@@ -88,6 +91,7 @@ export const sites = [
       shortDesc: '轻量文件转换。',
       url: 'https://convertio.co/',
       category: 'tool',
+      icon: '/icons/convertio.webp',
       },
       {
       id: 'remove_bg',
@@ -96,6 +100,7 @@ export const sites = [
       shortDesc: 'AI 抠图神器。',
       url: 'https://www.remove.bg/',
       category: 'tool',
+      icon: '/icons/remove-bg.webp',
       },
       {
       id: 'xiaohongshu_day',
@@ -104,6 +109,7 @@ export const sites = [
       shortDesc: '小红书去水印。',
       url: 'https://xiaohongshu.day/',
       category: 'tool',
+      icon: '/icons/xiaohongshu-day.webp',
       },
       {
       id: 'chaipip',
@@ -112,6 +118,7 @@ export const sites = [
       shortDesc: '高精度 IP 查询。',
       url: 'https://www.chaipip.com/',
       category: 'tool',
+      icon: '/icons/chaipip.webp',
       },
       {
       id: 'qq_browser_tools',
@@ -120,6 +127,7 @@ export const sites = [
       shortDesc: 'QQ 浏览器工具集。',
       url: 'https://tool.browser.qq.com/',
       category: 'tool',
+      icon: '/icons/qq-browser-tools.webp',
       },
   //开源      
       {
@@ -129,6 +137,7 @@ export const sites = [
       shortDesc: '全球最大代码托管平台。',
       url: 'https://github.com/',
       category: 'opensource',
+      icon: '/icons/github.webp',
       },
   //资源      
       {
@@ -138,6 +147,7 @@ export const sites = [
       shortDesc: '短剧网盘搜索。',
       url: 'https://duanjugou.top/',
       category: 'source',
+      icon: '/icons/duanjugou.webp',
       },
       {
       id: '1lou',
@@ -146,6 +156,7 @@ export const sites = [
       shortDesc: '影视 BT 社区。',
       url: 'https://www.1lou.me/',
       category: 'source',
+      icon: '/icons/1lou.webp',
       },
       {
       id: 'shukui',
@@ -154,7 +165,8 @@ export const sites = [
       shortDesc: '海量图书检索。',
       url: 'https://www.shukui.net/',
       category: 'source',
-      },      
+      icon: '/icons/shukui.webp',
+      },
       {
       id: 'zlibrary_cn',
       title: 'Z-Library 中文镜像',
@@ -162,6 +174,7 @@ export const sites = [
       shortDesc: 'Z-Library 中文入口。',
       url: 'https://zh.go-to-library.sk/',
       category: 'source',
+      icon: '/icons/zlibrary-cn.webp',
       },
   //论坛      
       {
@@ -171,6 +184,7 @@ export const sites = [
       shortDesc: '邀请制 Linux 论坛。',
       url: 'https://linux.do/',
       category: 'forum',
+      icon: '/icons/linux-do.webp',
       },
       {
       id: 'stackoverflow',
@@ -179,6 +193,7 @@ export const sites = [
       shortDesc: '开发者问答社区。',
       url: 'https://stackoverflow.com/',
       category: 'forum',
+      icon: '/icons/stackoverflow.webp',
       },
       {
       id: 'nodeseek',
@@ -187,6 +202,7 @@ export const sites = [
       shortDesc: '极客技术论坛。',
       url: 'https://www.nodeseek.com/',
       category: 'forum',
+      icon: '/icons/nodeseek.webp',
       },
       {
       id: 'v2ex',
@@ -195,6 +211,7 @@ export const sites = [
       shortDesc: '综合技术社区。',
       url: 'https://www.v2ex.com/',
       category: 'forum',
+      icon: '/icons/v2ex.webp',
       },
       {
       id: '52pojie',
@@ -203,6 +220,7 @@ export const sites = [
       shortDesc: '逆向安全论坛。',
       url: 'https://www.52pojie.cn/',
       category: 'forum',
+      icon: '/icons/52pojie.webp',
       },
   //天气      
       {
@@ -212,6 +230,7 @@ export const sites = [
       shortDesc: '实时卫星气象图。',
       url: 'https://zoom.earth/',
       category: 'weather',
+      icon: '/icons/zoom-earth.webp',
       },
       {
       id: 'windy',
@@ -220,6 +239,7 @@ export const sites = [
       shortDesc: '多模型风场地图。',
       url: 'http://windy.com/',
       category: 'weather',
+      icon: '/icons/windy.webp',
       },
       {
       id: 'zj_typhoon',
@@ -228,6 +248,7 @@ export const sites = [
       shortDesc: '权威台风监测。',
       url: 'https://typhoon.slt.zj.gov.cn/',
       category: 'weather',
+      icon: '/icons/zj-typhoon.webp',
       },
       {
       id: 'nmc',
@@ -236,6 +257,7 @@ export const sites = [
       shortDesc: '国家级气象服务。',
       url: 'https://www.nmc.cn/',
       category: 'weather',
+      icon: '/icons/nmc.webp',
       },
       {
       id: 'caiyun_h5',
@@ -244,6 +266,7 @@ export const sites = [
       shortDesc: '分钟级降水预报。',
       url: 'https://h5.caiyunapp.com/',
       category: 'weather',
+      icon: '/icons/caiyun-h5.webp',
       },
       {
       id: 'weather_channel',
@@ -252,6 +275,7 @@ export const sites = [
       shortDesc: 'TWC 全球天气门户。',
       url: 'https://weather.com/',
       category: 'weather',
+      icon: '/icons/weather-channel.webp',
       },
   //个人其他站点      
       {
@@ -261,7 +285,8 @@ export const sites = [
       shortDesc: '技术与生活随笔',
       url: 'https://blog.gufei.life/',
       category: 'Studying',
-      },      
+      icon: '/icons/gufei-blog.webp',
+      },
       {
       id: 'gufei_animals',
       title: '猛兽派对动物分类',
@@ -269,6 +294,7 @@ export const sites = [
       shortDesc: '猛兽派对动物特征分类系统',
       url: 'https://animals.gufei.life/',
       category: 'Studying',
+      icon: '/icons/gufei-animals.webp',
       },
       // pages      
       {
@@ -278,6 +304,7 @@ export const sites = [
       shortDesc: 'Git 驱动的静态网站托管。',
       url: 'https://pages.github.com/',
       category: 'pages',
+      icon: '/icons/github-pages.webp',
       },
       {
       id: 'cloudflare-pages',
@@ -286,6 +313,7 @@ export const sites = [
       shortDesc: 'CDN 优化的前端部署平台。',
       url: 'https://pages.cloudflare.com/',
       category: 'pages',
+      icon: '/icons/cloudflare-pages.webp',
       },
       {
       id: 'vercel',
@@ -294,6 +322,7 @@ export const sites = [
       shortDesc: 'Next.js 团队出品的部署平台。',
       url: 'https://vercel.com/',
       category: 'pages',
+      icon: '/icons/vercel.webp',
       },
 ];
 /**
