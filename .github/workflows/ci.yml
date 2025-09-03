@@ -1,1 +1,71 @@
+name: Build Astro-xwnav
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write 
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    # 跳过脚本自己的 [skip icons] 提交
+    if: "!contains(github.event.head_commit.message, '[skip icons]')"
+
+    steps:
+    # ① Checkout
+    - uses: actions/checkout@v4
+      with:
+        clean: false  
+
+    # ② Node & pnpm
+    - uses: actions/setup-node@v4
+      with: { node-version: 20 }
+    
+    # ③ 安装 pnpm
+    - uses: pnpm/action-setup@v2
+      with:
+        version: 9
+
+    # ④ 安装依赖
+    - run: pnpm install --frozen-lockfile
+
+    # ⑤ 运行图标脚本
+    - name: Run icon generator
+      id: icons
+      run: |
+        pnpm dlx tsx icon-system/0icon.ts
+        if ! git diff --quiet; then echo "changed=true" >> $GITHUB_OUTPUT; fi
+
+    # ⑥ 提交图标与数据文件变动
+    - name: Commit icon & data changes
+      if: steps.icons.outputs.changed == 'true'
+      run: |
+        git config user.name  "github-actions"
+        git config user.email "github-actions@github.com"
+
+        # 强制追踪被 .gitignore 排掉的图标文件
+        git add -f public/icons/**
+        git add src/data/navLinks.js
+
+        git commit -m "chore: auto add icons [skip icons]" || echo "Nothing to commit"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    # ⑦ 构建
+    - name: Build Astro site
+      run: pnpm build
+
+    # ⑧ 上传 ZIP Artifact
+    - uses: actions/upload-artifact@v4
+      with:
+        name: dist-${{ github.sha }}
+        path: dist
+        retention-days: 14
 
