@@ -23,16 +23,32 @@ npx tsx icon-system/0icon.ts
  */
 export const categories = [
   {
+    id: 'tool',
+    name: '工具',
+  },
+  {
     id: 'opensource',
-    name: '开源平台', icon: '/icons/category/opensource.svg',
+    name: '开源平台',
+  },
+  {
+    id: 'source',
+    name: '资源',
+  },
+  {
+    id: 'forum',
+    name: '论坛',
+  },  
+  {
+    id: 'weather',
+    name: '天气',
   },
   {
     id: 'Studying',
-    name: '个人其他站点', icon: '/icons/category/studying.svg',
+    name: '个人其他站点',
   },
   {
     id: 'pages',
-    name: '静态部署平台', icon: '/icons/category/pages.svg',
+    name: '静态部署平台',
   },
 ];
 /**
@@ -40,6 +56,71 @@ export const categories = [
  * @type {Array<{id: string, title: string, description: string, shortDesc: string, url: string, icon: string, category: string}>}
  */
 export const sites = [
+  //工具      
+      {
+      id: 'speedtest',
+      title: 'Speedtest® by Ookla',
+      description: '全球最受信赖的网络性能测试服务，依托 16 000+ 分布式服务器一键测量下载/上传带宽与延迟，并汇聚 520 亿次测试数据，为运营商、媒体及科研机构提供权威宽带统计与诊断。',
+      shortDesc: '网络测速工具。',
+      url: 'https://www.speedtest.net/',
+      category: 'tool',
+      },
+      {
+      id: 'ustc_test',
+      title: 'USTC 测速站',
+      description: '中国科学技术大学网络空间安全学院部署的双栈（IPv4/IPv6）测速平台，开源透明，可快速获取本地网络延迟、抖动与上下行带宽，并提供多所高校节点互测入口，方便学术网络环境评估。',
+      shortDesc: '中科大本地测速。',
+      url: 'https://test.ustc.edu.cn/',
+      category: 'tool',
+      },      
+      {
+      id: 'freeconvert',
+      title: 'FreeConvert',
+      description: '云端文件转换平台，支持 2 000+ 种音视频、图片、文档、电子书与压缩格式互转，采用 SSL/TLS 加密与隔离数据中心保障隐私，可处理数 GB 大文件，并提供批量与 API 自动化接口。',
+      shortDesc: '全格式云转换。',
+      url: 'https://www.freeconvert.com/',
+      category: 'tool',
+      },
+      {
+      id: 'convertio',
+      title: 'Convertio',
+      description: '覆盖 300+ 格式的在线转换服务，全部运算在浏览器端完成，上传即转、自动删源文件；支持拖拽、多文件并行及 Chrome 插件，界面简洁、上手零门槛。',
+      shortDesc: '轻量文件转换。',
+      url: 'https://convertio.co/',
+      category: 'tool',
+      },
+      {
+      id: 'remove_bg',
+      title: 'remove.bg',
+      description: '基于深度学习的图片背景移除工具，5 秒内自动抠图并输出透明 PNG，可一键替换背景或批量处理；提供桌面端、PS 插件与 API 方便电商、设计等场景集成。',
+      shortDesc: 'AI 抠图神器。',
+      url: 'https://www.remove.bg/',
+      category: 'tool',
+      },
+      {
+      id: 'xiaohongshu_day',
+      title: 'Xiaohongshu.day',
+      description: '小红书内容解析与无水印下载站，粘贴链接即可批量保存笔记图片、视频与 LivePhoto，永久有效、无需登录，适合运营与素材备份。',
+      shortDesc: '小红书去水印。',
+      url: 'https://xiaohongshu.day/',
+      category: 'tool',
+      },
+      {
+      id: 'chaipip',
+      title: 'ChaiPiIP',
+      description: '基于百度高精度 IP 库的定位查询服务，可精确到街道 / 商圈级别，实时刷新并展示多源 IP 数据，适合风控、运维和广告定向。',
+      shortDesc: '高精度 IP 查询。',
+      url: 'https://www.chaipip.com/',
+      category: 'tool',
+      },
+      {
+      id: 'qq_browser_tools',
+      title: '帮小忙工具箱',
+      description: '腾讯 QQ 浏览器推出的在线工具集合，囊括证件照生成、PDF 转换、文字 OCR、照片修复与二维码生成等百余实用小工具，一站式解决办公与生活琐事。',
+      shortDesc: 'QQ 浏览器工具集。',
+      url: 'https://tool.browser.qq.com/',
+      category: 'tool',
+      },
   //开源      
       {
       id: 'github',
@@ -48,26 +129,146 @@ export const sites = [
       shortDesc: '全球最大代码托管平台。',
       url: 'https://github.com/',
       category: 'opensource',
-      icon: '/icons/github.webp',
+      },
+  //资源      
+      {
+      id: 'duanjugou',
+      title: '短剧狗',
+      description: '专注短剧资源的网盘引擎，聚合并去重 2.4 万+ 夸克链接，支持标签筛选与实时更新榜单，界面极简且无广告，适合“搜-即-看”的碎片化追剧场景。',
+      shortDesc: '短剧网盘搜索。',
+      url: 'https://duanjugou.top/',
+      category: 'source',
+      },
+      {
+      id: '1lou',
+      title: 'BT之家·1LOU站',
+      description: '影视 BT 资源社区，由经典 BTBTT 迁移重建，秉持“回归初心·追求极简”，免注册浏览海量电影、剧集、动漫及纪录片种子，并提供 4K—1080P 画质分级与活跃讨论区。',
+      shortDesc: '影视 BT 社区。',
+      url: 'https://www.1lou.me/',
+      category: 'source',
+      },
+      {
+      id: 'shukui',
+      title: '书葵网',
+      description: '开放式图书检索与下载平台，整合主库/从库双索引，支持 ISBN、作者与出版社精准匹配，涵盖图书、期刊与古籍等多种载体。',
+      shortDesc: '海量图书检索。',
+      url: 'https://www.shukui.net/',
+      category: 'source',
+      },      
+      {
+      id: 'zlibrary_cn',
+      title: 'Z-Library 中文镜像',
+      description: 'Z-Library 官方推出的中文访问页，整合桌面版、Android App、Telegram 机器人、浏览器扩展与 Tor 域等多种入口，并提供“神奇邮箱”账号找回与动态镜像更新，确保在多变网络环境下持续稳定连接全球最大免费数字图书馆。',
+      shortDesc: 'Z-Library 中文入口。',
+      url: 'https://zh.go-to-library.sk/',
+      category: 'source',
+      },
+  //论坛      
+      {
+      id: 'linux_do',
+      title: 'LINUX DO',
+      description: '致力于 Linux 与开源生态的邀请制技术社区，倡导真诚、友善与专业分享，汇聚容器部署、AI 服务、翻译 API 等实战干货，讨论高质量且反灌水氛围浓厚。',
+      shortDesc: '邀请制 Linux 论坛。',
+      url: 'https://linux.do/',
+      category: 'forum',
+      },
+      {
+      id: 'stackoverflow',
+      title: 'Stack Overflow',
+      description: '全球最大开发者问答社区，采用投票与声望机制沉淀 5 000 万+ 代码解决方案，覆盖 100 余种语言与框架，并提供 Teams 私有版与 Collectives 企业知识协作。',
+      shortDesc: '开发者问答社区。',
+      url: 'https://stackoverflow.com/',
+      category: 'forum',
+      },
+      {
+      id: 'nodeseek',
+      title: 'NodeSeek',
+      description: '面向极客的轻量论坛，以 Web 开发、VPS 运维与服务器托管为核心话题，聚合技术讨论、资源分享与工具评测，界面简洁、氛围宽松。',
+      shortDesc: '极客技术论坛。',
+      url: 'https://www.nodeseek.com/',
+      category: 'forum',
+      },
+      {
+      id: 'v2ex',
+      title: 'V2EX',
+      description: '“way to explore” 的缩写，专注创意工作者与程序员的综合技术社区，节点制话题体系涵盖开发、职场与数码生活，强调探索精神与高质量讨论。',
+      shortDesc: '综合技术社区。',
+      url: 'https://www.v2ex.com/',
+      category: 'forum',
+      },
+      {
+      id: '52pojie',
+      title: '吾爱破解',
+      description: '国内知名逆向与软件安全论坛，深耕破解、补丁与反调试技术十余年，汇集原创教程、工具源码及 CTF 资源，并设悬赏问答与黑板报，聚集大量安全研究者。',
+      shortDesc: '逆向安全论坛。',
+      url: 'https://www.52pojie.cn/',
+      category: 'forum',
+      },
+  //天气      
+      {
+      id: 'zoom_earth',
+      title: 'Zoom Earth',
+      description: '全球级实时卫星与雷达融合气象地图，集成 NOAA、EUMETSAT 等多源资料并按小时更新，可叠加台风路径、降水云系、林火热点与海温等 30 + 图层，支持过去 24 小时动画回放与链接分享，广泛用于追踪极端天气与科普教学。',
+      shortDesc: '实时卫星气象图。',
+      url: 'https://zoom.earth/',
+      category: 'weather',
+      },
+      {
+      id: 'windy',
+      title: 'Windy.com',
+      description: '交互式全球风场与天气图，整合 ECMWF、GFS、ICON 等多套数值模型并提供 50 + 图层，可切换等压面、波浪、空气质量与云顶高度；支持航线规划、离线模式与插件生态，是水陆空户外活动的专业气象利器。',
+      shortDesc: '多模型风场地图。',
+      url: 'http://windy.com/',
+      category: 'weather',
+      },
+      {
+      id: 'zj_typhoon',
+      title: '浙江台风路径系统',
+      description: '浙江省防指与气象部门共建的台风路径实时发布平台，汇聚中央气象台、香港天文台与 JTWC 预报，回溯 1949 年以来全部西北太平洋热带气旋轨迹，并展示风圈半径、强度等级与暴雨概率网格，为华东沿海防灾减灾提供决策支持。',
+      shortDesc: '权威台风监测。',
+      url: 'https://typhoon.slt.zj.gov.cn/',
+      category: 'weather',
+      },
+      {
+      id: 'nmc',
+      title: '中央气象台·NMC',
+      description: '中央气象台官方门户，提供全国逐小时实况、7 日预报、台风海洋、环境气象与专业预警产品；整合 FY-4 卫星、全国雷达拼图与 CMA-GEPS 集合预报，并发布权威气象资讯与科研动态。',
+      shortDesc: '国家级气象服务。',
+      url: 'https://www.nmc.cn/',
+      category: 'weather',
+      },
+      {
+      id: 'caiyun_h5',
+      title: '彩云天气 H5',
+      description: '基于分钟级降水 Nowcasting 算法，融合中国气象雷达回波与格点订正模型，精确预测未来 2 小时雨雪起止；支持空气质量、超分辨率雷达动画与推送通知，界面简洁友好，适合移动端快速查询。',
+      shortDesc: '分钟级降水预报。',
+      url: 'https://h5.caiyunapp.com/',
+      category: 'weather',
+      },
+      {
+      id: 'weather_channel',
+      title: 'Weather.com',
+      description: 'The Weather Channel 官网，依托 IBM GRAF 全球 3 公里分辨率模型，提供 16 日趋势、互动雷达、飓风追踪与健康指数，并以新闻视频形式实时解读全球气象事件，用户量居同类网站前列。',
+      shortDesc: 'TWC 全球天气门户。',
+      url: 'https://weather.com/',
+      category: 'weather',
       },
   //个人其他站点      
       {
-      id: 'zywede',
-      title: 'zywe.de',
-      description: '个人主页与知识集散地。作为技术爱好者，展示自己的全部项目、实践与分享的中心',
-      shortDesc: 'zywe个人官网',
-      url: 'https://zywe.de/',
+      id: 'gufei_blog',
+      title: '顾の博客',
+      description: '顾绯维护的原创博客，分享前端开发技巧、脚本实践、学习方法与生活随笔，并以时间线与热力图形式记录成长轨迹，内容真诚且富技术洞见。',
+      shortDesc: '技术与生活随笔',
+      url: 'https://blog.gufei.life/',
       category: 'Studying',
-      icon: '/icons/zywede.png',
-      },
+      },      
       {
-      id: 'dh_zywede',
-      title: 'nav.zywe.de',
-      description: '专属导航页,这里汇聚了日常学习、开发与管理服务器所需的所有高效工具与资源链接，快速触达各项在线服务的便捷入口，确保学习与实践的流畅性。',
-      shortDesc: '让每个人都有自己的网站式收藏夹',
-      url: 'https://dh.zywe.de/',
+      id: 'gufei_animals',
+      title: '猛兽派对动物分类',
+      description: '根据猛兽派对游戏中动物特征进行分类的工具，用于快捷筛选游戏中任务所需的动物',
+      shortDesc: '猛兽派对动物特征分类系统',
+      url: 'https://animals.gufei.life/',
       category: 'Studying',
-      icon: '/icons/dh-zywede.png',
       },
       // pages      
       {
@@ -77,7 +278,6 @@ export const sites = [
       shortDesc: 'Git 驱动的静态网站托管。',
       url: 'https://pages.github.com/',
       category: 'pages',
-      icon: '/icons/github-pages.webp',
       },
       {
       id: 'cloudflare-pages',
@@ -86,7 +286,6 @@ export const sites = [
       shortDesc: 'CDN 优化的前端部署平台。',
       url: 'https://pages.cloudflare.com/',
       category: 'pages',
-      icon: '/icons/cloudflare-pages.webp',
       },
       {
       id: 'vercel',
@@ -95,7 +294,6 @@ export const sites = [
       shortDesc: 'Next.js 团队出品的部署平台。',
       url: 'https://vercel.com/',
       category: 'pages',
-      icon: '/icons/vercel.webp',
       },
 ];
 /**
