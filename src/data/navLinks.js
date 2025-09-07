@@ -52,7 +52,7 @@ export const categories = [
   },
   {
     id: 'ai',
-    name: 'AI', 
+    name: 'AI', icon: '/icons/category/ai.svg', 
   },
 ];
 /**
@@ -132,7 +132,7 @@ export const sites = [
       url: 'https://tool.browser.qq.com/',
       category: 'tool',
       icon: '/icons/qq-browser-tools.webp',
-      },
+      },      
       {
       id: 'mihoyonb',
       title: 'MihoyonB',
@@ -140,8 +140,8 @@ export const sites = [
       shortDesc: '在线工具导航。',
       url: 'https://mihoyonb.com',
       category: 'tool',
+      icon: '/icons/mihoyonb.webp',
       },
-
   //开源      
       {
       id: 'github',
@@ -188,7 +188,7 @@ export const sites = [
       url: 'https://zh.go-to-library.sk/',
       category: 'source',
       icon: '/icons/zlibrary-cn.webp',
-      },
+      },      
       {
       id: 'wpzy',
       title: 'WP资源网',
@@ -196,8 +196,8 @@ export const sites = [
       shortDesc: '综合资源分享。',
       url: 'https://wpzy.cc/',
       category: 'source',
+      icon: '/icons/wpzy.webp',
       },
-
       {
       id: 'kuafuzy',
       title: '夸父资源网',
@@ -205,8 +205,8 @@ export const sites = [
       shortDesc: '数字资源聚合。',
       url: 'https://www.kuafuzy.cc/',
       category: 'source',
+      icon: '/icons/kuafuzy.webp',
       },
-
   //论坛      
       {
       id: 'linux_do',
@@ -355,7 +355,7 @@ export const sites = [
       category: 'pages',
       icon: '/icons/vercel.webp',
       },
-  //个人其他站点
+  //个人其他站点      
       {
       id: 'plusai',
       title: 'PlusAI',
@@ -363,8 +363,8 @@ export const sites = [
       shortDesc: 'AI交互平台。',
       url: 'https://cc01.plusai.io/',
       category: 'ai',
+      icon: '/icons/plusai.webp',
       },
-
       {
       id: 'aigcbest',
       title: 'AiGC Best API',
@@ -372,8 +372,8 @@ export const sites = [
       shortDesc: 'AI接口服务。',
       url: 'https://api.aigcbest.top/',
       category: 'ai',
+      icon: '/icons/aigcbest.webp',
       },
-
       {
       id: 'gptgod',
       title: 'GPT God',
@@ -381,8 +381,8 @@ export const sites = [
       shortDesc: 'AI对话平台。',
       url: 'https://gptgod.online/',
       category: 'ai',
+      icon: '/icons/gptgod.webp',
       },
-
       {
       id: 'bltcy',
       title: 'BLTCY AI',
@@ -390,8 +390,8 @@ export const sites = [
       shortDesc: 'AI接口服务。',
       url: 'https://api.bltcy.ai/',
       category: 'ai',
+      icon: '/icons/bltcy.webp',
       },
-
       {
       id: 'foxcode',
       title: 'FoxCode AI',
@@ -399,8 +399,8 @@ export const sites = [
       shortDesc: 'AI代码助手。',
       url: 'https://foxcode.rjj.cc/',
       category: 'ai',
+      icon: '/icons/foxcode.webp',
       },
-
 ];
 /**
  * 搜索网站功能
