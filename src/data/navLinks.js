@@ -50,6 +50,10 @@ export const categories = [
     id: 'pages',
     name: '静态部署平台', icon: '/icons/category/pages.svg',
   },
+  {
+    id: 'ai',
+    name: 'AI', 
+  },
 ];
 /**
  * 网站列表
@@ -129,6 +133,15 @@ export const sites = [
       category: 'tool',
       icon: '/icons/qq-browser-tools.webp',
       },
+      {
+      id: 'mihoyonb',
+      title: 'MihoyonB',
+      description: '一个聚合类在线工具站点，提供常用网页工具、资源导航和快捷入口，帮助用户快速找到所需功能和服务，提升效率。',
+      shortDesc: '在线工具导航。',
+      url: 'https://mihoyonb.com',
+      category: 'tool',
+      },
+
   //开源      
       {
       id: 'github',
@@ -176,6 +189,24 @@ export const sites = [
       category: 'source',
       icon: '/icons/zlibrary-cn.webp',
       },
+      {
+      id: 'wpzy',
+      title: 'WP资源网',
+      description: '专注于网络资源分享的网站，涵盖影视、学习资料、软件工具等多类资源，为用户提供便捷的下载与获取渠道。',
+      shortDesc: '综合资源分享。',
+      url: 'https://wpzy.cc/',
+      category: 'source',
+      },
+
+      {
+      id: 'kuafuzy',
+      title: '夸父资源网',
+      description: '聚合多领域数字资源的平台，涵盖影视、动漫、学习与娱乐资源，更新频率高，适合多元化需求用户。',
+      shortDesc: '数字资源聚合。',
+      url: 'https://www.kuafuzy.cc/',
+      category: 'source',
+      },
+
   //论坛      
       {
       id: 'linux_do',
@@ -324,6 +355,52 @@ export const sites = [
       category: 'pages',
       icon: '/icons/vercel.webp',
       },
+  //个人其他站点
+      {
+      id: 'plusai',
+      title: 'PlusAI',
+      description: '一个提供AI大模型交互体验的平台，支持多领域智能问答、写作与办公辅助，界面简洁，响应快速。',
+      shortDesc: 'AI交互平台。',
+      url: 'https://cc01.plusai.io/',
+      category: 'ai',
+      },
+
+      {
+      id: 'aigcbest',
+      title: 'AiGC Best API',
+      description: '聚合式AI API服务，提供文本生成、问答、对话等多种模型接口，适合开发者快速接入AI能力。',
+      shortDesc: 'AI接口服务。',
+      url: 'https://api.aigcbest.top/',
+      category: 'ai',
+      },
+
+      {
+      id: 'gptgod',
+      title: 'GPT God',
+      description: '在线AI对话与应用平台，基于大语言模型，支持多场景应用如写作、编程、问答，定位为高效智能助手。',
+      shortDesc: 'AI对话平台。',
+      url: 'https://gptgod.online/',
+      category: 'ai',
+      },
+
+      {
+      id: 'bltcy',
+      title: 'BLTCY AI',
+      description: '提供稳定高效的AI接口服务，覆盖文本生成、智能对话和创作辅助，适合开发者与团队接入应用。',
+      shortDesc: 'AI接口服务。',
+      url: 'https://api.bltcy.ai/',
+      category: 'ai',
+      },
+
+      {
+      id: 'foxcode',
+      title: 'FoxCode AI',
+      description: '聚焦编程与开发辅助的AI平台，支持智能代码生成、调试与文档生成，面向开发者的效率工具。',
+      shortDesc: 'AI代码助手。',
+      url: 'https://foxcode.rjj.cc/',
+      category: 'ai',
+      },
+
 ];
 /**
  * 搜索网站功能
