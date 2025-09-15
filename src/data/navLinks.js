@@ -141,7 +141,7 @@ export const sites = [
       url: 'https://mihoyonb.com',
       category: 'tool',
       icon: '/icons/mihoyonb.webp',
-      },
+      },      
       {
       id: 'kdown_moiu_cn',
       title: 'KDown',
@@ -149,6 +149,7 @@ export const sites = [
       shortDesc: '百度网盘解析下载工具。',
       url: 'https://kdown.moiu.cn',
       category: 'tool',
+      icon: '/icons/kdown-moiu-cn.webp',
       },
       {
       id: 'bdbdjx_top',
@@ -157,6 +158,7 @@ export const sites = [
       shortDesc: '前端应用／工具界面。',
       url: 'https://bdbdjx.top/',
       category: 'tool',
+      icon: '/icons/bdbdjx-top.webp',
       },
       {
       id: 'analysis_icy6_cn',
@@ -165,6 +167,7 @@ export const sites = [
       shortDesc: '在线解析／分析服务（工具）。',
       url: 'https://analysis.icy6.cn',
       category: 'tool',
+      icon: '/icons/analysis-icy6-cn.webp',
       },
   //开源      
       {
@@ -230,7 +233,7 @@ export const sites = [
       url: 'https://www.kuafuzy.cc/',
       category: 'source',
       icon: '/icons/kuafuzy.webp',
-      },
+      },      
       {
       id: 'huanmengacg_com',
       title: '幻萌ACG',
@@ -238,6 +241,7 @@ export const sites = [
       shortDesc: 'ACG 内容资源源站。',
       url: 'https://www.huanmengacg.com',
       category: 'source',
+      icon: '/icons/category/source.svg',
       },
   //论坛      
       {
