@@ -142,6 +142,30 @@ export const sites = [
       category: 'tool',
       icon: '/icons/mihoyonb.webp',
       },
+      {
+      id: 'kdown_moiu_cn',
+      title: 'KDown',
+      description: '百度网盘在线解析工具，支持高速下载文件，是一种绕过下载限制、提升云存储文件获取速度的网络辅助服务。',
+      shortDesc: '百度网盘解析下载工具。',
+      url: 'https://kdown.moiu.cn',
+      category: 'tool',
+      },
+      {
+      id: 'bdbdjx_top',
+      title: 'Vite App (bdbdjx.top)',
+      description: '基于 Vite 的前端应用界面，可能提供某类在线工具或实用功能，虽然具体用途未公开，但其形式与工具服务特性更为接近。',
+      shortDesc: '前端应用／工具界面。',
+      url: 'https://bdbdjx.top/',
+      category: 'tool',
+      },
+      {
+      id: 'analysis_icy6_cn',
+      title: 'Analysis.iCY6.cn',
+      description: '疑似在线解析或分析服务，当前访问返回错误，功能不完全明确，但从域名与“analysis”关键词看似属于工具类服务。',
+      shortDesc: '在线解析／分析服务（工具）。',
+      url: 'https://analysis.icy6.cn',
+      category: 'tool',
+      },
   //开源      
       {
       id: 'github',
@@ -206,6 +230,14 @@ export const sites = [
       url: 'https://www.kuafuzy.cc/',
       category: 'source',
       icon: '/icons/kuafuzy.webp',
+      },
+      {
+      id: 'huanmengacg_com',
+      title: '幻萌ACG',
+      description: '疑似 ACG（动画·漫画·游戏）内容源网站，提供动漫或相关视觉内容资源，是内容消费／下载的来源站点。',
+      shortDesc: 'ACG 内容资源源站。',
+      url: 'https://www.huanmengacg.com',
+      category: 'source',
       },
   //论坛      
       {
