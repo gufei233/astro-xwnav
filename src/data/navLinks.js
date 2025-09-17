@@ -169,6 +169,14 @@ export const sites = [
       category: 'tool',
       icon: '/icons/analysis-icy6-cn.webp',
       },
+      {
+      id: 'snapany',
+      title: 'SnapAny',
+      description: '一款多功能在线下载工具，支持从 YouTube、Facebook、Twitter、Instagram 等各大平台获取视频与音频资源。无需安装软件即可快速解析链接，操作简洁高效，适合跨平台内容收集与存档使用。',
+      shortDesc: '在线视频音频下载工具。',
+      url: 'https://snapany.com/',
+      category: 'tool',
+      },
   //开源      
       {
       id: 'github',
@@ -242,6 +250,14 @@ export const sites = [
       url: 'https://www.huanmengacg.com',
       category: 'source',
       icon: '/icons/category/source.svg',
+      },
+      {
+      id: 'gdstudio-music',
+      title: 'GDStudio Music',
+      description: '一个面向音乐爱好者与创作者的在线音乐体验平台，提供高品质流媒体播放、精选曲库和个性化推荐，强调沉浸式的试听氛围与社区互动。它致力于让用户发现新声音，同时为独立音乐人提供展示与传播的舞台。',
+      shortDesc: '在线音乐体验平台。',
+      url: 'https://music.gdstudio.xyz/',
+      category: 'source',
       },
   //论坛      
       {
