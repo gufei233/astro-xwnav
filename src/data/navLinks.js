@@ -168,7 +168,7 @@ export const sites = [
       url: 'https://analysis.icy6.cn',
       category: 'tool',
       icon: '/icons/analysis-icy6-cn.webp',
-      },
+      },      
       {
       id: 'snapany',
       title: 'SnapAny',
@@ -176,6 +176,7 @@ export const sites = [
       shortDesc: '在线视频音频下载工具。',
       url: 'https://snapany.com/',
       category: 'tool',
+      icon: '/icons/snapany.webp',
       },
   //开源      
       {
@@ -250,7 +251,7 @@ export const sites = [
       url: 'https://www.huanmengacg.com',
       category: 'source',
       icon: '/icons/category/source.svg',
-      },
+      },      
       {
       id: 'gdstudio-music',
       title: 'GDStudio Music',
@@ -258,6 +259,7 @@ export const sites = [
       shortDesc: '在线音乐体验平台。',
       url: 'https://music.gdstudio.xyz/',
       category: 'source',
+      icon: '/icons/category/source.svg',
       },
   //论坛      
       {
